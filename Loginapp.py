@@ -24,7 +24,7 @@ class Login(App):
         self.box.add_widget(self.country)
         self.box.add_widget(self.txt3)
         self.box.add_widget(self.btn)
-
+#----------------------------------------
         self.btn.bind(on_press=self.press)
         return self.box
     def press(self,e):
