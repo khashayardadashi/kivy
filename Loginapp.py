@@ -5,6 +5,7 @@ from kivy.uix.textinput import TextInput
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.button import Button
 from kivy.core.window import Window
+from kivy.uix.checkbox import CheckBox
 #-----------------------------------
 class Login(App):
     Window.size=(300,500)
@@ -16,7 +17,8 @@ class Login(App):
         self.country=Label(text='[b]please enter your Country:[/b]',markup=True)
         self.txt3=TextInput(multiline=False)
         self.btn=Button(background_color=[1,0,0,1],text='Submit')
-        self.box=BoxLayout(orientation='vertical')
+        self.ckb=CheckBox()
+        self.box=BoxLayout(orientation= 'vertical')
         self.box.add_widget(self.name1)
         self.box.add_widget(self.txt1)
         self.box.add_widget(self.family)
@@ -24,7 +26,7 @@ class Login(App):
         self.box.add_widget(self.country)
         self.box.add_widget(self.txt3)
         self.box.add_widget(self.btn)
-#----------------------------------------
+        self.box.add_widget(self.ckb)
         self.btn.bind(on_press=self.press)
         return self.box
     def press(self,e):
