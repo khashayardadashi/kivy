@@ -17,7 +17,7 @@ class Login(App):
         self.country=Label(text='[b]please enter your Country:[/b]',markup=True)
         self.txt3=TextInput(multiline=False)
         self.btn=Button(background_color=[1,0,0,1],text='Submit')
-        self.ckb=CheckBox()
+        self.ckb=CheckBox(active=True)
         self.box=BoxLayout(orientation= 'vertical')
         self.box.add_widget(self.name1)
         self.box.add_widget(self.txt1)
